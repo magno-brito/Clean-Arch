@@ -10,5 +10,7 @@ Este modelo de arquitetura faz a separação entre a arquitetura em 4 partes: co
 
 - O usuário faz as requisições para o sistema e esta requisição chega a camada @controller. Geralmente esta camada apresenta os endpoints da aplicação. Por exemplo se o domínio for www.teste.com, é na camada de controller que podemos setar uma uri como endpoint do tipo "/user". Assim temos o seguint endpoit: "www.teste.com/user". A classe controller faz a comunicação direta com a camada @service.
 - A camada service contém as regras de negócios da aplicação e é através dela que podemos nos comunicar com o modelo (model) do sistema. Geralmente os modelos são criados para mapear tabelas do banco de dados.
-- A camada @repository é uma interface responsável por fazer a comunicação com o banco de dados. Geralmente ela 
+- A camada @repository é uma interface responsável por fazer a comunicação com o banco de dados. Geralmente ela extends uma interface que implementa o CRUD.
+
+## Clean Arch
 
